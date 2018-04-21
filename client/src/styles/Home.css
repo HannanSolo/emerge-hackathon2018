@@ -1,0 +1,50 @@
+/*Main Content Styles*/
+#header-container{
+    text-align: center;
+    margin: auto;
+    max-width: 500px;
+    background-color: #fff;
+}
+
+#header-text{
+    margin: 0px;
+}
+
+/*Main Logo Styles*/
+#logo-container{
+    width: 100%;
+    padding: 5px 0px 10px 0px;
+    background-color: #fff;
+    /* border-bottom-color: #808080; */
+    border-bottom-color: #fff;
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+}
+
+#logo {
+    width:100%;
+    max-width:300px;
+    display: block;
+    margin: auto;
+    color: #fff;
+    font-family: Monoton;
+    -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon 1.5s ease-in-out infinite alternate;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+  
+#logo:hover {
+    color: #00ffd8;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 .3em #00ffd8);
+    }
+    to {
+        filter: drop-shadow(0 0 .1em #363a39);
+    }
+}

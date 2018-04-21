@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  background-image: url("background.png");
+  background-color: #fff;
+  -webkit-animation: animatedBackground 15s linear infinite;
+	animation: animatedBackground 15s linear infinite;
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0 }
+	to { background-position: 383px 230px; }
+}
