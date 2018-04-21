@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Home from './components/Home';
-import Ping from './components/Ping';
-import './index.css';
+import { App } from './App.js'
+import * as firebase from 'firebase';
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAGlwyHe5FS9rGQETEYWZKbhA-GBY6LjIw",
+  authDomain: "city-lights.firebaseapp.com",
+  databaseURL: "https://city-lights.firebaseio.com/",
+  projectId: "city-lights",
+  storageBucket: "city-lights.appspot.com",
+  messagingSenderId: "1928021175"
+};
+firebase.initializeApp(config);
 
 //Assigns URL routes
-ReactDOM.render(
-  <BrowserRouter>
-    {/* Renders first URL match */}
-    <Switch>
-      <Route exact path="/api/ping" component={Ping} />
-      <Route exact path="*" component={Home} />
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App/>,document.getElementById('root'));

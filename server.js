@@ -3,6 +3,24 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+///////////////////////////
+// SOCKET.IO
+//////////////////////////
+io.on('connection', (client) => {
+  console.log('a user has connected');
+  io.emit('testMessage');
+
+  client.on('helloo', ()=>{
+    console.log('the client said hello');
+  });
+});
+
+const port = 8888;
+io.listen(port);
+console.log('listening on port ', port);
+///////////////////////////
+// EXPRESS ROUTES
+//////////////////////////
 //Select build folder
 app.use(express.static(path.join(__dirname, '/client/build')));
 
